@@ -9,35 +9,34 @@
     <link rel="stylesheet" href="./styles/styles.css"/>
     <link rel="stylesheet" href="./styles/PaginaDeLogin.css"/>
     <link rel="stylesheet" href="./styles/CampoDeDigitacao.css"/>
-     <title>Login | CodeConnect</title>
+    <title>Login | CodeConnect</title>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/cjs/react.production.min.js" 
-            integrity="sha512-wGcZXj/wGy0PrK1PUJpABds0CNVMN5FOvx6RJ4VFX6d1cP21LHdn32pqqHZxnlAyTY3MN6agJQnV/RkWiOTZzw==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/cjs/react-dom.production.min.js" 
-            integrity="sha512-JNrK0svSdzmupRoUCGrnD5Im9ybaQ/dtwjbEE8top7nLk6qlV6jatbUinWJf1B+//gADpfBVm8nF1eyreAJX3w==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.25.8/babel.min.js" 
-            integrity="sha512-Ev4MGAwDUabula0G4904zmM3r0YHBc7JA3B6jJQutxY3VPbRqrBE+l1C9qhJuAhn3lDha91rvSHaAW6wAXQkbA==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-    </script>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.25.8/babel.min.js"></script>
 
     <script type="text/babel">
-    const Titulo = () => { 
-        return ( 
-        <h1>Login</h1>
-        )
-    }
+        const Titulo = () => { 
+            return ( 
+                <h1 className="form__titulo">Login</h1>
+            );
+        }
 
-    export default Titulo;
+        const Subtitulo = () => {
+            return (
+                <h2 className="form__texto">Boas-Vindas! Faça seu login.</h2>
+            );
+        }
 
-
-</script>
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <>
+                <Titulo />
+                <Subtitulo />
+            </>
+        );
+    </script>
 </body>
 </html>
+
